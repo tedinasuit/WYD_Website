@@ -1,11 +1,8 @@
 <template>
-  <div class="background-container">
     <div class="container" :style="containerStyle">
-      <img class="image" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo">
-      <SloganText />
-      <button @click="toggleLogoSize">Toggle Logo Size</button>
+      <img class="image" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
+      <SloganText v-if="!state.isLogoSmall" /> <!-- Render SloganText only if isLogoSmall is false -->
     </div>
-  </div>
 </template>
 
 <script>
@@ -26,6 +23,8 @@ export default {
     // Method to toggle the logo size
     const toggleLogoSize = () => {
       state.isLogoSmall = !state.isLogoSmall;
+      // Change background image when toggling logo size
+      document.body.style.backgroundImage = state.isLogoSmall ? "url('@/assets/hippie-achtergrond-2.png')" : "url('@/assets/Hippie-kleurrijk.png')";
     };
 
     // Computed property for logo style
@@ -67,6 +66,7 @@ export default {
 .image {
   max-width: 100%;
   height: auto;
+  cursor: pointer; /* Change cursor to pointer when hovering over the image */
 }
 
 .slogan {
@@ -77,18 +77,6 @@ export default {
   color: white; /* Change the color of the slogan */
   margin-top: 9vh; /* Add some space between the image and the slogan */
 }
-
-.background-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-image: url('@/assets/Hippie-kleurrijk.png');
-}
-
 .button {
   margin-top: 20px;
 }
