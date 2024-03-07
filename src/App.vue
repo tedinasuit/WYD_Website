@@ -1,15 +1,10 @@
 <template>
-    <HomeScreen />
+  <router-view></router-view>
 </template>
 
 <script>
-import HomeScreen from './components/HomeScreen.vue';
-
 export default {
-  name: 'App',
-  components: {
-    HomeScreen
-  }
+  name: 'App'
 }
 </script>
 

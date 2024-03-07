@@ -1,16 +1,58 @@
 <template>
-    <div class="background-container">
-  <div class="container">
-    <img class="image" src="@/assets/WhatYouDesign-TransWit.png" alt="WYDLogo">
-    <p class="slogan">BRINGING YOUR IDEAS TO LIFE.</p>
+  <div class="background-container">
+    <div class="container" :style="containerStyle">
+      <img class="image" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo">
+      <SloganText />
+      <button @click="toggleLogoSize">Toggle Logo Size</button>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
+import { reactive, computed } from 'vue';
+import SloganText from '@/components/SloganText.vue'; // Import the SloganText component
+
 export default {
-  name: 'HomeScreen'
-}
+  name: 'HomeScreen',
+  components: {
+    SloganText // Register the SloganText component
+  },
+  setup() {
+    // Reactive state
+    const state = reactive({
+      isLogoSmall: false
+    });
+
+    // Method to toggle the logo size
+    const toggleLogoSize = () => {
+      state.isLogoSmall = !state.isLogoSmall;
+    };
+
+    // Computed property for logo style
+    const logoStyle = computed(() => ({
+      maxWidth: state.isLogoSmall ? '160px' : '100%',
+      transition: 'max-width 0.5s ease-in-out' // Add transition for smooth resizing
+    }));
+
+    // Computed property for container style
+    const containerStyle = computed(() => ({
+      textAlign: 'center',
+      position: 'absolute',
+      top: state.isLogoSmall ? '10px' : '50%',
+      left: '50%',
+      transform: state.isLogoSmall ? 'translate(-50%, 0)' : 'translate(-50%, -50%)',
+      transition: 'top 0.5s ease-in-out, transform 0.5s ease-in-out' // Add transition for smooth repositioning
+    }));
+
+    // Return data, methods, and computed properties accessible in the template
+    return {
+      state,
+      toggleLogoSize,
+      logoStyle,
+      containerStyle
+    };
+  }
+};
 </script>
 
 <style scoped>
@@ -45,5 +87,9 @@ export default {
   background-size: cover;
   background-position: center;
   background-image: url('@/assets/Hippie-kleurrijk.png');
+}
+
+.button {
+  margin-top: 20px;
 }
 </style>
