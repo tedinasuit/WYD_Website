@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image with Gaussian Blur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('Media/Hippie-kleurrijk.png'); /* Specify the path to your image */
+            background-size: cover; /* This property ensures that the background image covers the entire viewport */
+        }
+        .container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+        .slogan {
+            font-family: "League Spartan", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+            font-size: 10vh; /* Adjust the font size as needed */
+            color: white; /* Change the color of the slogan */
+            margin-top: 9vh; /* Add some space between the image and the slogan */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="image" src="Media/WhatYouDesign-TransWit.png" alt="Your Image">
+        <p class="slogan">BRINGING YOUR IDEAS TO LIFE.</p>
+    </div>
+</body>
+</html>
