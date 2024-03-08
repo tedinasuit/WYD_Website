@@ -1,18 +1,18 @@
+// store/index.js
 import { createStore } from 'vuex';
 
 export default createStore({
   state: {
-    backgroundImage: '@/assets/Hippie-kleurrijk.png', // Default background image
+    backgroundImage: '../assets/Hippie-kleurrijk.png' // Initial background image
   },
   mutations: {
-    setBackground(state, imageUrl) {
-      state.backgroundImage = imageUrl;
-    },
+    setBackgroundImage(state, image) {
+      state.backgroundImage = image;
+    }
   },
   actions: {
-    setBackground({ commit }, imageUrl) {
-      commit('setBackground', imageUrl);
-    },
-  },
-  modules: {},
+    changeBackgroundImage({ commit }, image) {
+      commit('setBackgroundImage', image);
+    }
+  }
 });
