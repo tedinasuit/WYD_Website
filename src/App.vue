@@ -1,9 +1,9 @@
 <template>
   <div class="background">
+    <NavBar v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
     <div class="container" :style="containerStyle">
       <img class="image" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
       <SloganText v-if="!state.isLogoSmall" />
-      <NavBar v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
     </div>
   </div>
 </template>
@@ -86,14 +86,7 @@ export default {
   max-width: 100%;
   height: auto;
   cursor: pointer;
+  z-index: 2;
 }
 
-.slogan {
-  font-family: "League Spartan", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  font-size: 10vh;
-  color: white;
-  margin-top: 9vh;
-}
 </style>
