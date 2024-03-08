@@ -25,7 +25,6 @@ export default {
 
 .navbar {
   padding: 10px;
-  min-width: 700px;
 }
 
 ul {
@@ -37,9 +36,9 @@ ul {
 }
 
 li {
-  margin-right: 200px; /* Set margin between items */
-  margin-left: 200px;
-  margin-top: 3.5%;
+  margin-right: 15vh; /* Set margin between items */
+  margin-left: 15vh;
+  margin-top: 6vh;
 }
 
 a {

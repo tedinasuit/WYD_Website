@@ -1,4 +1,4 @@
-# wyd_website
+# What You Design.
 
 ## Project setup
 ```
