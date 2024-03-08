@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div class="background" :style="{ 'background-image': `url(${backgroundImage})` }">
     <NavBar v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
     <div class="container" :style="containerStyle">
       <img class="image" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
@@ -27,12 +27,7 @@ export default {
 
     const toggleLogoSize = () => {
       state.isLogoSmall = !state.isLogoSmall;
-      if (state.isLogoSmall) {
-        state.showNavBar = true;
-      }
-      else {
-        state.showNavBar = false;
-      }
+      state.showNavBar = state.isLogoSmall; // Show NavBar when the logo is small
     };
 
     const logoStyle = computed(() => ({
@@ -49,11 +44,17 @@ export default {
       transition: 'top 0.5s ease-in-out, transform 0.5s ease-in-out'
     }));
 
+    // Computed property for background image
+    const backgroundImage = computed(() => {
+      return state.isLogoSmall ? require('@/assets/hippie-achtergrond-2.png') : require('@/assets/Hippie-kleurrijk.png');
+    });
+
     return {
       state,
       toggleLogoSize,
       logoStyle,
-      containerStyle
+      containerStyle,
+      backgroundImage
     };
   }
 };
@@ -66,10 +67,17 @@ export default {
   left: 0;
   width: 100%;
   height: 100%; /* Fills the entire viewport */
-  background-image: url('@/assets/Hippie-kleurrijk.png');
   background-size: cover; /* Scales image to cover the entire container */
   background-position: center; /* Centers the image within the container */
+  opacity: 1;
+  transition: opacity 0.5s;
 }
+
+
+.background.fade-transition {
+  opacity: 0;
+}
+
 
 </style>
 
