@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <img class="image" src="@/assets/WhatYouDesign-TransWit.png" alt="WYDLogo">
-    <p class="slogan">BRINGING YOUR IDEAS TO LIFE.</p>
+    <p class="slogan">OUR WORK</p>
   </div>
 </template>
 
@@ -18,11 +17,6 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.image {
-  max-width: 100%;
-  height: auto;
 }
 
 .slogan {

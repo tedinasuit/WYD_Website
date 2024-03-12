@@ -5,6 +5,7 @@
       <img class="image" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
       <SloganText v-if="!state.isLogoSmall" />
     </div>
+    <router-view></router-view> <!-- Render the current view based on the route -->
   </div>
 </template>
 
@@ -61,6 +62,10 @@ export default {
 </script>
 
 <style>
+body {
+  overflow: hidden;
+}
+
 .background {
   position: absolute; /* Ensures background covers entire viewport */
   top: 0;

@@ -1,4 +1,4 @@
-# What You Design.
+# WYD_Website
 
 ## Project setup
 ```
