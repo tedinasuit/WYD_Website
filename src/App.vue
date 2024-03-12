@@ -5,7 +5,9 @@
       <img class="image" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
       <SloganText v-if="!state.isLogoSmall" />
     </div>
-    <router-view  v-if="state.isLogoSmall" ></router-view> <!-- Render the current view based on the route -->
+    <Transition>
+      <router-view v-if="state.isLogoSmall" ></router-view> <!-- Apply fade transition -->
+    </Transition>
   </div>
 </template>
 
@@ -74,16 +76,15 @@ body {
   height: 100%; /* Fills the entire viewport */
   background-size: cover; /* Scales image to cover the entire container */
   background-position: center; /* Centers the image within the container */
-  opacity: 1;
-  transition: opacity 0.5s;
+}
+  
+.v-enter-active {
+  transition: opacity 0.5s ease;
 }
 
-
-.background.fade-transition {
+.v-enter-from {
   opacity: 0;
 }
-
-
 </style>
 
 <style scoped>
