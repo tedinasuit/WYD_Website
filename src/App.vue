@@ -5,7 +5,7 @@
       <img class="image" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
       <SloganText v-if="!state.isLogoSmall" />
     </div>
-    <router-view></router-view> <!-- Render the current view based on the route -->
+    <router-view  v-if="state.isLogoSmall" ></router-view> <!-- Render the current view based on the route -->
   </div>
 </template>
 
