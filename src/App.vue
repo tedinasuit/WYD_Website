@@ -76,6 +76,7 @@ body {
   height: 100%; /* Fills the entire viewport */
   background-size: cover; /* Scales image to cover the entire container */
   background-position: center; /* Centers the image within the container */
+  transition: background-image 0.5s ease; /* Apply transition to background image */
 }
   
 .v-enter-active {
