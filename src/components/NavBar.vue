@@ -2,7 +2,7 @@
   <div class="navbar-background">
     <nav class="navbar">
       <ul>
-        <li><router-link to="/our-work">OUR WORK</router-link></li>
+        <li><router-link to="/">OUR WORK</router-link></li>
         <li><router-link to="/about-us">ABOUT US</router-link></li>
       </ul>
     </nav>

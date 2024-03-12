@@ -5,7 +5,7 @@ import AboutUs from '../views/AboutUs.vue';
 
 const routes = [
   {
-    path: '/our-work',
+    path: '/',
     name: 'OurWork',
     component: OurWork
   },
