@@ -79,7 +79,8 @@ body {
 }
   
 .v-enter-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
+  transition-delay: 0.1s; /* Add a delay of 0.3s before the fade-in transition */
 }
 
 .v-enter-from {
