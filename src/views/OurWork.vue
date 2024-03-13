@@ -1,30 +1,37 @@
 <template>
   <div class="container">
-    <p class="slogan">OUR WORK</p>
+    <div class="component-container">
+      <BrandingWebsite />
+    </div>
+    <div class="component-container">
+      <InstagramPage />
+    </div>
   </div>
 </template>
 
 <script>
+import BrandingWebsite from '@/components/BrandingWebsite.vue';
+import InstagramPage from '@/components/InstagramPage.vue';
 export default {
-  name: 'HomeComp'
+  name: 'HomeComp',
+  components: {
+    BrandingWebsite,
+    InstagramPage
+  }
 }
 </script>
 
 <style scoped>
 .container {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Horizontally center items */
+  align-items: center; /* Vertically center items */
+  height: 100vh; /* Make the container full height of the viewport */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
-.slogan {
-  font-family: "League Spartan", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  font-size: 10vh; /* Adjust the font size as needed */
-  color: white; /* Change the color of the slogan */
-  margin-top: 9vh; /* Add some space between the image and the slogan */
+.component-container {
+  margin-bottom: 20px; /* Add some space between the components */
 }
 </style>
