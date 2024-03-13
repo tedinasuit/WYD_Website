@@ -27,11 +27,12 @@ export default {
   flex-direction: column; /* Stack items vertically */
   justify-content: center; /* Horizontally center items */
   align-items: center; /* Vertically center items */
-  height: 100vh; /* Make the container full height of the viewport */
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  margin-top: 200px;
 }
 
 .component-container {
-  margin-bottom: 20px; /* Add some space between the components */
+  margin-bottom: 100px; /* Add some space between the components */
+  margin-top: 100px;
 }
 </style>

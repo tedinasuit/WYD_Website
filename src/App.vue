@@ -64,9 +64,6 @@ export default {
 </script>
 
 <style>
-body {
-  overflow: hidden;
-}
 
 .background {
   position: absolute; /* Ensures background covers entire viewport */
