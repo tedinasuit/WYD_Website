@@ -2,7 +2,6 @@
   <div>
     <div class="background" :style="{ 'background-image': `url(${backgroundImage})` }"></div>
     <div class="content-wrapper">
-      <NavBar v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
       <Transition>
         <router-view v-if="state.isLogoSmall" ></router-view> <!-- Apply fade transition -->
       </Transition>
@@ -10,6 +9,7 @@
         <img class="image" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
         <SloganText v-if="!state.isLogoSmall" />
       </div>
+      <NavBar v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
     </div>
   </div>
 </template>
@@ -75,6 +75,28 @@ body {
   background-position: center;
   background-attachment: fixed; /* Keep the background image fixed */
 }
+
+.title {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2vw; /* Adjust the font size as needed */
+    color: white; /* Change the color of the slogan */
+    margin-top: 9vh; /* Add some space between the image and the slogan */
+    margin-left: 5%;
+
+  }
+
+  .text {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1vw; /* Adjust the font size as needed */
+    color: white; /* Change the color of the slogan */
+    margin-top: 9vh; /* Add some space between the image and the slogan */
+    margin-left: 5%;
+    width: 400px;
+  }
 
 .content-wrapper {
   height: 100vh; /* Take the full height of the viewport */
