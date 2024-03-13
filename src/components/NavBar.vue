@@ -20,7 +20,7 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 0; /* Ensure the navbar stays on top of other content */
+  z-index: 5; /* Ensure the navbar stays on top of other content */
 }
 
 .navbar {

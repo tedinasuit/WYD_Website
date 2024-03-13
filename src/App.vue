@@ -1,13 +1,16 @@
 <template>
-  <div class="background" :style="{ 'background-image': `url(${backgroundImage})` }">
-    <NavBar v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
-    <div class="container" :style="containerStyle">
-      <img class="image" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
-      <SloganText v-if="!state.isLogoSmall" />
+  <div>
+    <div class="background" :style="{ 'background-image': `url(${backgroundImage})` }"></div>
+    <div class="content-wrapper">
+      <NavBar v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
+      <Transition>
+        <router-view v-if="state.isLogoSmall" ></router-view> <!-- Apply fade transition -->
+      </Transition>
+      <div class="container" :style="containerStyle">
+        <img class="image" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
+        <SloganText v-if="!state.isLogoSmall" />
+      </div>
     </div>
-    <Transition>
-      <router-view v-if="state.isLogoSmall" ></router-view> <!-- Apply fade transition -->
-    </Transition>
   </div>
 </template>
 
@@ -64,6 +67,31 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keep the background image fixed */
+}
+
+.content-wrapper {
+  height: 100vh; /* Take the full height of the viewport */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.container {
+  text-align: center;
+  position: relative; /* Change position to relative */
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  z-index: 10;
+}
 
 .background {
   position: absolute; /* Ensures background covers entire viewport */
@@ -74,32 +102,6 @@ export default {
   background-size: cover; /* Scales image to cover the entire container */
   background-position: center; /* Centers the image within the container */
   transition: background-image 0.5s ease; /* Apply transition to background image */
-}
-  
-.v-enter-active {
-  transition: opacity 0.3s ease;
-  transition-delay: 0.1s; /* Add a delay of 0.3s before the fade-in transition */
-}
-
-.v-enter-from {
-  opacity: 0;
-}
-</style>
-
-<style scoped>
-.container {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.image {
-  max-width: 100%;
-  height: auto;
-  cursor: pointer;
-  z-index: 2;
 }
 
 </style>

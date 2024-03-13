@@ -27,7 +27,6 @@ export default {
   flex-direction: column; /* Stack items vertically */
   justify-content: center; /* Horizontally center items */
   align-items: center; /* Vertically center items */
-  overflow-y: scroll; /* Enable vertical scrolling */
   margin-top: 200px;
 }
 
