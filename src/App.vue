@@ -11,18 +11,21 @@
       </div>
       <NavBar v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
     </div>
+    <InstagramButton v-if="state.showNavBar"  />
   </div>
 </template>
 
 <script>
 import { reactive, computed } from 'vue';
 import SloganText from '@/components/SloganText.vue';
+import InstagramButton from '@/components/InstagramButton.vue';
 import NavBar from '@/components/NavBar.vue'; // Import the NavBar component
 
 export default {
   name: 'App',
   components: {
     SloganText,
+    InstagramButton,
     NavBar // Register the NavBar component
   },
   setup() {

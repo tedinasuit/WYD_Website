@@ -5,7 +5,7 @@
         </div>
         <div>
           <div class="title">
-              <p>Branding Website</p>
+              <p>BRANDING WEBSITE</p>
           </div>
           <div class="text">
             <p>lorem ipsum motherfucker lorem ipsum motherfucker lorem ipsum motherfucker lorem ipsum motherfucker lorem ipsum motherfucker</p>
