@@ -102,7 +102,6 @@ body {
     font-weight: 500;
     font-style: normal;
     color: white; /* Change the color of the slogan */
-    margin-top: 9vh; /* Add some space between the image and the slogan */
     width: 400px;
     max-width: 90vw;
     text-align: center; 
@@ -114,7 +113,6 @@ body {
 
 .title {
   font-size: 2.5rem; /* Adjust title font size */
-  margin-bottom: 1rem; /* Add spacing below the title */
 }
 
 .text {
@@ -142,7 +140,7 @@ body {
 
 .image {
   width: 65vh; /* Ensure image fills its container */
-  max-width: 80vw; /* Limit image height to 60% of viewport height */
+  max-width: min(80vw, 60vh); /* Cap the max-width at either 80vw or 60vh, whichever is smaller */
   object-fit: contain; /* Scale the image while preserving its aspect ratio */
 }
 
