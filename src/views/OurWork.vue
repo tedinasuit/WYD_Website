@@ -27,11 +27,11 @@ export default {
   flex-direction: column; /* Stack items vertically */
   justify-content: center; /* Horizontally center items */
   align-items: center; /* Vertically center items */
-  margin-top: 200px;
+  margin-top: clamp(120px, 10vw, 40vh);
 }
 
 .component-container {
   margin-bottom: 100px; /* Add some space between the components */
-  margin-top: 100px;
+
 }
 </style>
