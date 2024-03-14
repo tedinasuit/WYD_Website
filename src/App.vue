@@ -6,7 +6,7 @@
         <router-view v-if="state.isLogoSmall" ></router-view> <!-- Apply fade transition -->
       </Transition>
       <div class="container" :style="containerStyle">
-        <img class="image" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
+        <img class="logoimage" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
         <SloganText v-if="!state.isLogoSmall" />
       </div>
       <NavBar v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
@@ -81,19 +81,25 @@ body {
   background-attachment: fixed; /* Keep the background image fixed */
 }
 
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  min-width: 90vw;
+}
+
 .title {
     font-family: "League Spartan", sans-serif;
     font-weight: 900;
     font-style: normal;
-
     color: white; /* Change the color of the slogan */
-    margin-top: 9vh; /* Add some space between the image and the slogan */
 
   }
 
 .text {
     font-family: "League Spartan", sans-serif;
-    font-weight: 900;
+    font-weight: 500;
     font-style: normal;
     color: white; /* Change the color of the slogan */
     margin-top: 9vh; /* Add some space between the image and the slogan */
@@ -101,20 +107,16 @@ body {
 }
 
 .text-wrap {
-  padding-left: 10%;
-}
-
-.text-wrap {
-  padding: 0 1rem; /* Add horizontal padding to text container */
+  padding: 5vw;
 }
 
 .title {
-  font-size: 1.5rem; /* Adjust title font size */
+  font-size: 2.5rem; /* Adjust title font size */
   margin-bottom: 1rem; /* Add spacing below the title */
 }
 
 .text {
-  font-size: 1rem; /* Adjust text font size */
+  font-size: 1.5rem; /* Adjust text font size */
   padding-bottom: 5%;
 }
 
@@ -128,11 +130,17 @@ body {
   position: relative; /* Change position to relative */
 }
 
-.image {
+.logoimage {
   max-width: 100%;
   height: auto;
   cursor: pointer;
   z-index: 10;
+}
+
+.image {
+  width: 65vh; /* Ensure image fills its container */
+  max-width: 80vw; /* Limit image height to 60% of viewport height */
+  object-fit: contain; /* Scale the image while preserving its aspect ratio */
 }
 
 .background {

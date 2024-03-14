@@ -21,20 +21,6 @@ export default {
 </script>
 
 <style scoped>
-.flexbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap-reverse;
-}
-
-.image {
-  width: 80%; /* Ensure image fills its container */
-  max-height: 60vh; /* Limit image height to 60% of viewport height */
-  object-fit: contain; /* Scale the image while preserving its aspect ratio */
-}
-
-
 
 
 

@@ -21,30 +21,7 @@ export default {
 </script>
 
 <style scoped>
-.flexbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap-reverse;
-}
 
-.image {
-  width: 80%; /* Ensure image fills its container */
-  max-height: 60vh; /* Limit image height to 60% of viewport height */
-  object-fit: contain; /* Scale the image while preserving its aspect ratio */
-}
 
-.text-wrap {
-  padding: 0 1rem; /* Add horizontal padding to text container */
-}
 
-.title {
-  font-size: 1.5rem; /* Adjust title font size */
-  margin-bottom: 1rem; /* Add spacing below the title */
-}
-
-.text {
-  font-size: 1rem; /* Adjust text font size */
-  padding-bottom: 5%;
-}
 </style>
