@@ -75,7 +75,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: hidden; 
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Keep the background image fixed */
@@ -85,23 +85,38 @@ body {
     font-family: "League Spartan", sans-serif;
     font-weight: 900;
     font-style: normal;
-    font-size: 2vw; /* Adjust the font size as needed */
+
     color: white; /* Change the color of the slogan */
     margin-top: 9vh; /* Add some space between the image and the slogan */
-    margin-left: 5%;
 
   }
 
-  .text {
+.text {
     font-family: "League Spartan", sans-serif;
     font-weight: 900;
     font-style: normal;
-    font-size: 1vw; /* Adjust the font size as needed */
     color: white; /* Change the color of the slogan */
     margin-top: 9vh; /* Add some space between the image and the slogan */
-    margin-left: 5%;
     width: 400px;
-  }
+}
+
+.text-wrap {
+  padding-left: 10%;
+}
+
+.text-wrap {
+  padding: 0 1rem; /* Add horizontal padding to text container */
+}
+
+.title {
+  font-size: 1.5rem; /* Adjust title font size */
+  margin-bottom: 1rem; /* Add spacing below the title */
+}
+
+.text {
+  font-size: 1rem; /* Adjust text font size */
+  padding-bottom: 5%;
+}
 
 .content-wrapper {
   height: 100vh; /* Take the full height of the viewport */
