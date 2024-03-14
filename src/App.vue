@@ -104,6 +104,8 @@ body {
     color: white; /* Change the color of the slogan */
     margin-top: 9vh; /* Add some space between the image and the slogan */
     width: 400px;
+    max-width: 90vw;
+    text-align: center; 
 }
 
 .text-wrap {
@@ -128,6 +130,7 @@ body {
 .container {
   text-align: center;
   position: relative; /* Change position to relative */
+  overflow-x: hidden;
 }
 
 .logoimage {

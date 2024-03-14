@@ -37,8 +37,8 @@ ul {
 
 li {
   margin-right: 15vh; /* Set margin between items */
-  margin-left: 15vh;
-  margin-top: 6vh;
+  margin-left: 15vh;  
+  margin-top: 4rem;
 }
 
 a {
