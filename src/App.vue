@@ -11,7 +11,9 @@
       </div>
       <NavBar v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
     </div>
-    <InstagramButton v-if="state.showNavBar"  />
+    <Transition>
+      <InstagramButton v-if="state.showNavBar"  />
+    </Transition>
   </div>
 </template>
 
@@ -127,6 +129,15 @@ body {
   background-size: cover; /* Scales image to cover the entire container */
   background-position: center; /* Centers the image within the container */
   transition: background-image 0.5s ease; /* Apply transition to background image */
+}
+
+.v-enter-active {
+  transition: opacity 0.3s ease;
+  transition-delay: 0.1s; /* Add a delay of 0.3s before the fade-in transition */
+}
+
+.v-enter-from {
+  opacity: 0;
 }
 
 </style>
