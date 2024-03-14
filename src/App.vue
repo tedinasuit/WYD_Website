@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { reactive, computed } from 'vue';
+import { reactive, computed, onMounted } from 'vue';
 import SloganText from '@/components/SloganText.vue';
 import InstagramButton from '@/components/InstagramButton.vue';
 import NavBar from '@/components/NavBar.vue'; // Import the NavBar component
@@ -60,6 +60,11 @@ export default {
       return state.isLogoSmall ? require('@/assets/hippie-achtergrond-2.png') : require('@/assets/Hippie-kleurrijk.png');
     });
 
+    // Set the document title
+    onMounted(() => {
+      document.title = 'What You Design';
+    });
+
     return {
       state,
       toggleLogoSize,
@@ -70,6 +75,7 @@ export default {
   }
 };
 </script>
+
 
 <style>
 body {
