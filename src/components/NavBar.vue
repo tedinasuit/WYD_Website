@@ -19,8 +19,14 @@ export default {
 .navbar-background {
   position: fixed;
   top: 0;
-  width: 100%;
-  background-image: inherit;
+  width: 100%;  
+  filter: drop-shadow(1.5vw 0.0vw 7px #00000023); 
+  left: 0;
+  height: clamp(100px, 9vw, 40vh);
+  background-image: url('@/assets/hippie-achtergrond-2.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  transition: background-image 0.5s ease; /* Apply transition to background image */
 }
 
 .navbar {

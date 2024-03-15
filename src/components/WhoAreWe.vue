@@ -11,7 +11,7 @@
         <p>
           We are a new 'dynamic studio' that can bring your ideas to life.<br>
           <br>
-          At WYD, we like to challenge traditional norms by adding our vibrant, youthful and bold touch.</p>
+          At WYD, we like to challenge traditional norms by adding our vibrant, youthful and bold touch!</p>
       </div>
     </div>
   </div>

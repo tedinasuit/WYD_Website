@@ -5,11 +5,11 @@
       <Transition>
         <router-view v-if="state.isLogoSmall" ></router-view> <!-- Apply fade transition -->
       </Transition>
-      <div class="container" :style="containerStyle">
+      <div style="z-index: 10;" class="container" :style="containerStyle">
         <img class="logoimage" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
         <SloganText v-if="!state.isLogoSmall" />
       </div>
-      <NavBar style="z-index: 2;" v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
+      <NavBar style="z-index: 4;" v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
     </div>
     <Transition>
       <InstagramButton v-if="state.showNavBar"  />
@@ -60,9 +60,17 @@ export default {
       return state.isLogoSmall ? require('@/assets/hippie-achtergrond-2.png') : require('@/assets/Hippie-kleurrijk.png');
     });
 
+    
+
     // Set the document title
     onMounted(() => {
       document.title = 'What You Design';
+
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = require('@/assets/hippie-achtergrond-2.png'); // Path to your background image
+      link.as = 'image';
+      document.head.appendChild(link);
     });
 
     return {
@@ -139,13 +147,14 @@ body {
   text-align: center;
   position: relative; /* Change position to relative */
   overflow-x: hidden;
-  z-index: 3;
+  z-index: 2;
 }
 
 .logoimage {
   max-width: 100%;
   height: auto;
   cursor: pointer;
+  z-index: 10;
 }
 
 .image {
