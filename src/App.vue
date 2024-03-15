@@ -9,7 +9,7 @@
         <img class="logoimage" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
         <SloganText v-if="!state.isLogoSmall" />
       </div>
-      <NavBar v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
+      <NavBar style="z-index: 2;" v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
     </div>
     <Transition>
       <InstagramButton v-if="state.showNavBar"  />
@@ -100,6 +100,7 @@ body {
     font-weight: 900;
     font-style: normal;
     color: white; /* Change the color of the slogan */
+    text-align: left;
 
   }
 
@@ -110,7 +111,7 @@ body {
     color: white; /* Change the color of the slogan */
     width: 400px;
     max-width: 90vw;
-    text-align: center; 
+    text-align: left;
 }
 
 .text-wrap {
@@ -135,13 +136,13 @@ body {
   text-align: center;
   position: relative; /* Change position to relative */
   overflow-x: hidden;
+  z-index: 3;
 }
 
 .logoimage {
   max-width: 100%;
   height: auto;
   cursor: pointer;
-  z-index: 10;
 }
 
 .image {
@@ -169,5 +170,17 @@ body {
 .v-enter-from {
   opacity: 0;
 }
+
+@media (orientation: portrait) {
+  .title {
+    text-align: center;
+  }
+
+  .text {
+    text-align: center;
+
+  }
+}
+
 
 </style>

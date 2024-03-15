@@ -5,7 +5,7 @@
     </div>
     <div class="text-wrap">
       <div class="title">
-        <p>INSTAGRAM PAGE</p>
+        <p>BRANDING WEBSITE</p>
       </div>
       <div class="text">
         <p>lorem ipsum motherfucker lorem ipsum motherfucker lorem ipsum motherfucker lorem ipsum motherfucker lorem ipsum motherfucker</p>
@@ -21,7 +21,5 @@ export default {
 </script>
 
 <style scoped>
-
-
 
 </style>
