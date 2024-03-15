@@ -9,7 +9,7 @@
         <img class="logoimage" src="@/assets/WhatYouDesign-TransWit.png" :style="logoStyle" alt="WYDLogo" @click="toggleLogoSize">
         <SloganText v-if="!state.isLogoSmall" />
       </div>
-      <NavBar style="z-index: 4;" v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
+      <NavBar style="z-index: 4; " v-if="state.showNavBar" /> <!-- Render NavBar only if showNavBar is true -->
     </div>
     <Transition>
       <InstagramButton v-if="state.showNavBar"  />
@@ -195,6 +195,10 @@ body {
 
   }
 }
+
+
+
+
 
 
 </style>

@@ -16,17 +16,32 @@ export default {
 </script>
 
 <style scoped>
-.navbar-background {
+@media (orientation: landscape) {
+  .navbar-background {
   position: fixed;
   top: 0;
-  width: 100%;  
-  filter: drop-shadow(1.5vw 0.0vw 7px #00000023); 
+  width: 100%;
+  height: clamp(100px, 8vw, 40vh);
+  filter: drop-shadow(1vw 0.0vw 7px #0000000e); 
+  background-image: inherit;
   left: 0;
-  height: clamp(100px, 9vw, 40vh);
+  background-image: url('@/assets/hippie-achtergrond-2.png');
+  background-size: cover; /* Scales image to cover the entire container */
+  transition: background-image 0.5s ease; /* Apply transition to background image */
+}
+}
+
+@media (orientation: portrait) {
+  .navbar-background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
   background-image: url('@/assets/hippie-achtergrond-2.png');
   background-repeat: no-repeat;
   background-position-x: center;
   transition: background-image 0.5s ease; /* Apply transition to background image */
+}
 }
 
 .navbar {
