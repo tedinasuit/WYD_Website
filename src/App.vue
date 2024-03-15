@@ -106,7 +106,7 @@ body {
 
 .text {
     font-family: "League Spartan", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
     color: white; /* Change the color of the slogan */
     width: 400px;
@@ -115,16 +115,19 @@ body {
 }
 
 .text-wrap {
+  flex: 1; /* Allow text container to grow to fill remaining space */
+  max-width: 400px; /* Limit the maximum width of the text container */
   padding: 5vw;
+  text-align: center; /* Center align text */
 }
 
 .title {
-  font-size: 2.5rem; /* Adjust title font size */
+  font-size: clamp(20px, 3rem, 8vw); /* Adjust title font size */
 }
 
 .text {
-  font-size: 1.5rem; /* Adjust text font size */
-  padding-bottom: 5%;
+  font-size: clamp(20px, 2rem, 6vw); /* Adjust text font size */
+  
 }
 
 .content-wrapper {
@@ -149,6 +152,8 @@ body {
   width: 65vh; /* Ensure image fills its container */
   max-width: min(80vw, 60vh); /* Cap the max-width at either 80vw or 60vh, whichever is smaller */
   object-fit: contain; /* Scale the image while preserving its aspect ratio */
+  border-radius: 10px;
+  filter: drop-shadow(1.5vw 0.8vw 7px #00000023);
 }
 
 .background {

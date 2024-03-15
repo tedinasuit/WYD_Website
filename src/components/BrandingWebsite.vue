@@ -8,7 +8,9 @@
         <p>BRANDING WEBSITE</p>
       </div>
       <div class="text">
-        <p>lorem ipsum motherfucker lorem ipsum motherfucker lorem ipsum motherfucker lorem ipsum motherfucker lorem ipsum motherfucker</p>
+        <p>
+            We have designed and created a modern and beautiful website for WYD.
+        </p>
       </div>
     </div>
   </div>
@@ -16,7 +18,7 @@
 
 <script>
 export default {
-  name: 'InstagramPage'
+  name: 'BrandingWebsite'
 }
 </script>
 
