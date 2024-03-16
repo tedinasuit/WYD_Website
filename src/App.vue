@@ -42,7 +42,8 @@ export default {
     };
 
     const logoStyle = computed(() => ({
-      maxWidth: state.isLogoSmall ? '160px' : '100%',
+      maxWidth: state.isLogoSmall ? '25vw' : '100%',
+      maxWidth: state.isLogoSmall ? '15vh' : '100%',
       transition: 'max-width 0.5s ease-in-out'
     }));
 
@@ -159,7 +160,8 @@ body {
 }
 
 .logoimage {
-  max-width: 100%;
+  max-width: 50vw;
+  max-height: 30vh; /* Set maximum height based on viewport height */
   height: auto;
   cursor: pointer;
   z-index: 10;
