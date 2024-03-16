@@ -86,6 +86,13 @@ export default {
 
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -109,7 +116,7 @@ body {
     font-style: normal;
     color: white; /* Change the color of the slogan */
     text-align: left;
-
+    transform: translateZ(0.1px);
   }
 
 .text {
@@ -120,6 +127,7 @@ body {
     width: 400px;
     max-width: 90vw;
     text-align: left;
+    transform: translateZ(0.1px);
 }
 
 .text-wrap {
@@ -170,10 +178,11 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Fills the entire viewport */
+  min-height: 100vh;
   background-size: cover; /* Scales image to cover the entire container */
   background-position: center; /* Centers the image within the container */
   transition: background-image 0.5s ease; /* Apply transition to background image */
+  background-repeat: repeat;
 }
 
 .v-enter-active {
@@ -186,6 +195,7 @@ body {
 }
 
 @media (orientation: portrait) {
+
   .title {
     text-align: center;
   }

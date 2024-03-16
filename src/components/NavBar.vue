@@ -21,7 +21,7 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
-  height: clamp(100px, 8vw, 40vh);
+  height: clamp(150px, 9vw, 40vh);
   filter: drop-shadow(1vw 0.0vw 7px #0000000e); 
   background-image: inherit;
   left: 0;
@@ -34,14 +34,17 @@ export default {
 @media (orientation: portrait) {
   .navbar-background {
   position: fixed;
+  object-fit: fill;
   top: 0;
-  width: 100%;
+  width: 100vw;
   left: 0;
   background-image: url('@/assets/hippie-achtergrond-2.png');
   background-repeat: no-repeat;
   background-position-x: center;
   transition: background-image 0.5s ease; /* Apply transition to background image */
 }
+
+
 }
 
 .navbar {
@@ -57,8 +60,8 @@ ul {
 }
 
 li {
-  margin-right: 15vh; /* Set margin between items */
-  margin-left: 15vh;  
+  margin-right: clamp(10px, 15vh, 25vw); /* Set margin between items */
+  margin-left: clamp(10px, 15vh, 25vw); 
   margin-top: 4rem;
 }
 
